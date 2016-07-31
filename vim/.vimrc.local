@@ -1,0 +1,26 @@
+" tab navigation
+nnoremap <C-h> :tabp<CR>
+nnoremap <C-l> :tabn<CR>
+nnoremap <leader>x :tabc<CR>
+nnoremap <leader>b :CtrlPBuffer<CR>
+
+" Navigation while typing
+inoremap <C-h> <left>
+inoremap <C-l> <right>
+cnoremap <C-h> <left>
+cnoremap <C-j> <down>
+cnoremap <C-k> <up>
+cnoremap <C-l> <right>
+
+" Disable arrow keys
+nnoremap <up> <nop>
+nnoremap <down> <nop>
+nnoremap <left> <nop>
+nnoremap <right> <nop>
+
+" NerdTree toggle
+nnoremap \ :NERDTreeToggle<CR>
+
+" Ctags
+let g:vim_tags_gems_tags_command = "ctags -R -f Gemfile.lock.tags `bundle show --paths` 2>/dev/null &"
+let g:vim_tags_auto_generate = 1
